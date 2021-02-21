@@ -48,25 +48,9 @@
     <preference for="MageSuite\ContentConstructor\Service\ProductTileRenderer"
                 type="MageSuite\ContentConstructorFrontend\Service\ProductTileRenderer" />
 
-    <type name="Magento\Catalog\Block\Product\AbstractProduct">
-        <plugin name="creativestyle_add_product_object_to_image_data_array" type="MageSuite\ContentConstructorFrontend\Model\Plugin\ProductImage"/>
-    </type>
-    <type name="Magento\Catalog\Block\Product\AbstractProduct">
-        <plugin name="add_product_object_to_image_data_array" type="Smile\ElasticsuiteSwatches\Model\Plugin\ProductImage" disabled="true"/>
-    </type>
-    <type name="Magento\Catalog\Block\Product\AbstractProduct">
-        <plugin name="add_product_object_to_image_data_array" type="Magento\Swatches\Model\Plugin\ProductImage" disabled="true"/>
-    </type>
-
     <type name="Magento\Catalog\Controller\Category\View">
         <plugin name="redirect_if_one_result"
                 type="MageSuite\ContentConstructorFrontend\Plugin\ProductFinder\RedirectWhenOnlyOneResultWasFound"/>
-    </type>
-
-    <type name="MageSuite\ContentConstructorFrontend\Model\Plugin\ProductImage">
-        <arguments>
-            <argument name="swatchesHelperData" xsi:type="object">Smile\ElasticsuiteSwatches\Helper\Swatches</argument>
-        </arguments>
     </type>
 
     <type name="\MageSuite\ContentConstructorFrontend\Model\Filter\Pool">
